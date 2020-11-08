@@ -1,0 +1,258 @@
+html{
+    height: 100%;
+}
+
+body { 
+    position: relative;
+    display: grid;
+    grid-template-areas: 
+      "header header header"
+      "dialogs message add";
+    grid-template-rows: 61px 1fr;
+    grid-template-columns: 25% 1fr 15%;
+    height: 100vh;
+    margin: 0;
+    }
+
+
+/*========== Стили Header========== */
+
+
+
+  #header {
+    grid-area: header;
+    background-color: #96ff0e;
+  }
+
+  #header .logo{
+    position: relative;
+    height: 41px;
+    width: 102px;
+    top: 13px;
+    left: 13px;
+  }
+  #header .logo a{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  #header .logo a b{
+    margin: 12px;
+    position: absolute;
+    text-decoration: none;
+    color: #232323;
+    font-family: 'Montserrat', sans-serif;
+  }
+  #header .enter{
+    position: absolute;
+    height: 41px;
+    width: 41px;
+    right: 13px;
+    top: 13px;
+  }
+  #header .enter a{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  #header .enter a img{
+      width: 100%;
+  }
+
+/* ============ Стили Dialog ==========*/
+
+
+#dialogs { 
+    grid-area: dialogs; 
+    background-color:white;
+    position: relative; 
+}
+
+#dialogs ul{
+    width: 100%;
+    height:100%;
+    margin: 0;
+    padding-left: 0;
+    position: absolute;
+    top: 62px;
+}
+
+#dialogs ul li{
+    width: 100%;
+    height: 60px;
+    list-style-type: none;
+}
+
+#dialogs ul li a{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    text-decoration: none;
+}
+#dialogs ul li h2{
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: #232323;
+    top: 10px;
+    left: 60px;
+}
+
+#dialogs ul li a img{
+    position: absolute;
+    height: 35px;
+    float: left;
+    margin: 13px;
+}
+
+
+/* =========== Стили Иконки User ======== */
+
+
+.user{
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    border-bottom: 2px  solid #edf3e6;
+    background-color: #edf3e6 ;
+    
+}
+
+.user img{
+    height: 35px;
+    float: left;
+    margin: 13px;
+}
+.user h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: #232323;
+    top: 10px;
+    position: relative;
+}
+.user a{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    margin-right: 20px;
+    top: 0px;
+    position: relative;
+    color: #232323;
+    float: left;
+}
+.user .active{
+    color:  #96ff0e;
+    border-width: 2px 3px 4px 5px;
+    border-color: turquoise;
+}
+
+/*=========== Стили поля Messege============== */
+
+#message { 
+    grid-area: message;
+    background-color: #f2f2f2;
+    position: relative;
+    }
+#message .not-message {
+    width: 100%;
+    position: absolute;
+    top: 100px;
+}
+#message .not-message img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.1;
+}
+#message b{
+    opacity: 0.1;
+    text-align: center;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+}
+
+#message .text-message{
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    bottom: 0%;
+}
+#message .text-message textarea{
+    position: absolute;
+    height: 90%;
+    border: none;
+    outline: none;
+    resize: none;
+    left: 5%;
+    width: 71%;
+    border-radius: 5px;
+}
+#message .text-message .button{
+    position: absolute;
+    background: white;
+    right: 5%;
+    height: 94%;
+    width: 20%;
+    border-radius: 5px;
+}
+#message .text-message .button button{
+    position: absolute;
+    height: 30px;
+    width: 90%;
+    background: #96ff0e;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    top: 32%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#add { 
+    grid-area: add;
+    background-color: white;
+}
+#authorization{
+    border-radius: 20px;
+    position: absolute;
+    border: 2px solid #f2f2f2;
+    width: 30%;
+    left: 35%;
+    top: 200px;
+    height: 280px;
+    text-align: center;
+}
+#authorization input{
+    border-radius: 20px;
+    border: 2px solid #f2f2f2;
+    height: 40px;
+    width: 90%;
+}
+#authorization h2{
+    margin: 10px;
+    color: #9e9e9e;
+    font-family: 'Montserrat', sans-serif;
+}
+#authorization p{
+    color: #9e9e9e;
+    font-family: 'Montserrat', sans-serif;
+}
+#authorization div{
+    margin: 5px 0 15px;
+}
+#authorization button{
+    height: 30px;
+    width: 60%;
+    background: #96ff0e;
+    font-family: 'Montserrat', sans-serif;
+    color: #232323;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    top: 32%;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
