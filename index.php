@@ -1,28 +1,6 @@
 <?php
-include "configs/db.php";
-include "configs/nastroyki.php";
-/*
-==================================================================
-Отправка сообщения выбранному пользователю
-*/
-
-if (
-    isset($_POST["text"])  && $_POST["text"] != "" && isset($_COOKIE["user_id"])
-            && isset($_POST["addressee"])) 
-    {
-                //==== Вставить в таблицу "название таблицы"===== ()
-    $sql = "INSERT INTO 'message'( text, addressee, sender) VALUES ('" . $_POST["text"] . "', '"
-     . $_POST["addressee"] . "', '" . $_POST["sender"] . "')";
-    if (mysqli_query($connect, $sql)) {
-        echo "<h2>Сообщение отправленно</h2>";
-    }  
-
-}
-
-/*
-==================================================================
-*/
-
+    include "configs/db.php";
+    include "configs/settings.php";
 ?>
 
 <!DOCTYPE html>
@@ -34,16 +12,13 @@ if (
 </head>
 <body>
 
-    <?php
-        include "parts/header.php";
-        include "parts/dialog_list/dialogs.php";
-        include "parts/message/message.php";
-    ?>
-    <div id="add">
-        some add
-    </div>
 
-
+<?php
+    include "parts/header.php";
+    include "parts/dialog_list/dialogs.php";
+    include "parts/messages/display_messages.php";
+    include "parts/add/add.php"
+?>
 	<script src="script.js"></script>    
 </body>
 </html>

@@ -12,6 +12,7 @@ body {
     grid-template-columns: 25% 1fr 15%;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
     }
 
 
@@ -172,6 +173,49 @@ body {
     margin-top: 20px;
 }
 
+#message ul{
+    width: 100%;
+    height:100%;
+    margin: 0;
+    padding-left: 0;
+    position: absolute;
+}
+
+#message ul li{
+    width: 100%;
+    height: 60px;
+    list-style: none;
+}
+#message p{  
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0.9;
+    font-size: 12px;
+}
+#message .time{
+    opacity: 0.2;
+}
+
+#message ul li .addressee{
+    width: 50%;
+    height: 100%;
+    float: right;
+    text-align: center;
+}
+#message ul li .addressee div{
+    float: right;
+}
+#message ul li .addressee p{
+    float: right;
+}
+
+#message ul li .sender{
+    width: 50%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
 #message .text-message{
     position: absolute;
     width: 100%;
@@ -221,7 +265,7 @@ body {
     width: 30%;
     left: 35%;
     top: 200px;
-    height: 280px;
+    height: 320px;;
     text-align: center;
 }
 #authorization input{
@@ -229,6 +273,7 @@ body {
     border: 2px solid #f2f2f2;
     height: 40px;
     width: 90%;
+    outline: none;
 }
 #authorization h2{
     margin: 10px;
@@ -243,6 +288,50 @@ body {
     margin: 5px 0 15px;
 }
 #authorization button{
+    height: 30px;
+    width: 60%;
+    background: #96ff0e;
+    font-family: 'Montserrat', sans-serif;
+    color: #232323;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    top: 32%;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#registration{
+    border-radius: 20px;
+    position: absolute;
+    border: 2px solid #f2f2f2;
+    width: 30%;
+    left: 35%;
+    top: 200px;
+    height: 280px;
+    text-align: center;
+}
+#registration input{
+    border-radius: 20px;
+    border: 2px solid #f2f2f2;
+    height: 40px;
+    width: 90%;
+    outline: none;
+}
+#registration h2{
+    margin: 10px;
+    color: #9e9e9e;
+    font-family: 'Montserrat', sans-serif;
+}
+#registration p{
+    color: #9e9e9e;
+    font-family: 'Montserrat', sans-serif;
+}
+#registration div{
+    margin: 5px 0 15px;
+}
+#registration button{
     height: 30px;
     width: 60%;
     background: #96ff0e;

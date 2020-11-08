@@ -8,7 +8,7 @@
         <?php
         if(isset($_COOKIE["user_id"])) {
             ?>
-            <a href="vihod.php" ><img src="/images/enter.png"></a>
+            <a href="exit.php" ><img src="/images/enter.png"></a>
         <?php } else { ?>
             <a href="login.php"><img src="/images/enter.png"></a>
         <?php } ?>
